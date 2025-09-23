@@ -29,12 +29,12 @@ class BallByBall(Base):
     is_bye = Column(Boolean, default=False, nullable=False, index=True)
     is_leg_bye = Column(Boolean, default=False, nullable=False, index=True)
     
-    # Ball details
+   
     ball_type = Column(String(20), nullable=True, index=True)  # normal, yorker, bouncer, etc.
     shot_type = Column(String(20), nullable=True, index=True)  # drive, cut, pull, etc.
     fielding_position = Column(String(50), nullable=True, index=True)  # where ball went
     
-    # Additional information
+
     is_boundary = Column(Boolean, default=False, nullable=False, index=True)
     is_six = Column(Boolean, default=False, nullable=False, index=True)
     is_four = Column(Boolean, default=False, nullable=False, index=True)
