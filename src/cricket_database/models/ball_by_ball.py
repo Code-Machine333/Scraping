@@ -11,12 +11,10 @@ class BallByBall(Base):
     
     __tablename__ = "ball_by_ball"
     
-    # Core ball information
     inning_id = Column(Integer, ForeignKey("innings.id"), nullable=False, index=True)
     over_number = Column(Integer, nullable=False, index=True)
     ball_number = Column(Integer, nullable=False, index=True)  # 1-6, or 7+ for extras
     
-    # Players involved
     batsman_id = Column(Integer, ForeignKey("players.id"), nullable=False, index=True)
     bowler_id = Column(Integer, ForeignKey("players.id"), nullable=False, index=True)
     non_striker_id = Column(Integer, ForeignKey("players.id"), nullable=True, index=True)
