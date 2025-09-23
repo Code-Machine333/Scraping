@@ -43,7 +43,7 @@ class BallByBall(Base):
     is_six = Column(Boolean, default=False, nullable=False, index=True)
     is_four = Column(Boolean, default=False, nullable=False, index=True)
     
-    # Commentary and notes
+
     commentary = Column(Text, nullable=True)
     notes = Column(Text, nullable=True)
     
