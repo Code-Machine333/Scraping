@@ -47,10 +47,10 @@ class BallByBall(Base):
     commentary = Column(Text, nullable=True)
     notes = Column(Text, nullable=True)
     
-    # External references
+
     espn_id = Column(String(50), nullable=True, unique=True, index=True)
     
-    # Relationships
+
     inning = relationship("Inning", back_populates="ball_by_ball")
     batsman = relationship("Player", foreign_keys=[batsman_id], back_populates="ball_by_ball_batting")
     bowler = relationship("Player", foreign_keys=[bowler_id], back_populates="ball_by_ball_bowling")
