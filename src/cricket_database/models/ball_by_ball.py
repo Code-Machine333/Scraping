@@ -19,13 +19,11 @@ class BallByBall(Base):
     bowler_id = Column(Integer, ForeignKey("players.id"), nullable=False, index=True)
     non_striker_id = Column(Integer, ForeignKey("players.id"), nullable=True, index=True)
     
-    # Ball outcome
     runs_scored = Column(Integer, default=0, nullable=False, index=True)
     is_wicket = Column(Boolean, default=False, nullable=False, index=True)
     wicket_type = Column(String(20), nullable=True, index=True)  # bowled, caught, lbw, run_out, etc.
     wicket_player_id = Column(Integer, ForeignKey("players.id"), nullable=True, index=True)
     
-    # Extras
     is_wide = Column(Boolean, default=False, nullable=False, index=True)
     is_no_ball = Column(Boolean, default=False, nullable=False, index=True)
     is_bye = Column(Boolean, default=False, nullable=False, index=True)
