@@ -57,7 +57,6 @@ class BallByBall(Base):
     non_striker = relationship("Player", foreign_keys=[non_striker_id])
     wicket_player = relationship("Player", foreign_keys=[wicket_player_id])
     
-    # Indexes for common queries
     __table_args__ = (
         Index("idx_ball_inning_over", "inning_id", "over_number", "ball_number"),
         Index("idx_ball_batsman", "batsman_id", "runs_scored"),
