@@ -15,11 +15,7 @@ class MetricsHandler(BaseHTTPRequestHandler):
             return
         content = self._render_prom()
         data = content.encode("utf-8")
-        self.send_response(200)
-        self.send_header("Content-Type", "text/plain; version=0.0.4")
-        self.send_header("Content-Length", str(len(data)))
-        self.end_headers()
-        self.wfile.write(data)
+        
 
     def log_message(self, fmt, *args):
         # silence default stderr logging
