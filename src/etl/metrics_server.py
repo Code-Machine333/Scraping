@@ -19,7 +19,7 @@ class MetricsHandler(BaseHTTPRequestHandler):
 
     def log_message(self, fmt, *args):
         # silence default stderr logging
-        return
+        return  
 
     def _render_prom(self) -> str:
         metrics = {}
