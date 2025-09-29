@@ -11,10 +11,7 @@ bootstrap: ## Bootstrap the project (install dependencies and setup)
 	playwright install
 	@echo "✅ Project bootstrapped successfully!"
 
-format: ## Format code with black and isort
-	black src/ tests/
-	isort src/ tests/
-	@echo "✅ Code formatted successfully!"
+
 
 test: ## Run tests with pytest
 	pytest tests/ -v --cov=src --cov-report=term-missing
