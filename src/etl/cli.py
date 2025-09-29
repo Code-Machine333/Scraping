@@ -91,9 +91,7 @@ def queue(action: str = typer.Argument("list", help="list|prune"), keep: int = t
     """Inspect or prune the on-disk ETL queue."""
     items = _read_queue()
     if action == "list":
-        table = Table(title="ETL Queue")
-        table.add_column("file", style="cyan")
-        table.add_column("url", style="green")
+   
         for p in items[:200]:
             try:
                 payload = json.loads(p.read_text(encoding="utf-8"))
